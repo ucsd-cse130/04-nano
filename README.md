@@ -22,9 +22,9 @@ that you need to rethink your solution.
 
 The assignment is in the files:
 
-1. [Lexer.x][/src/Language/Nano/Lexer.x]
-2. [Parser.y][/src/Language/Nano/Parser.y]
-3. [Eval.hs][/src/Language/Nano/Eval.hs]
+1. [Lexer.x](/src/Language/Nano/Lexer.x)
+2. [Parser.y](/src/Language/Nano/Parser.y)
+3. [Eval.hs](/src/Language/Nano/Eval.hs)
 
 and
 
