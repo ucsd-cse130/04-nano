@@ -133,7 +133,7 @@ unit sc = testGroup "NANO"
               , "e : f"
               , Nano.EBin Nano.Cons (Nano.EVar "e") (Nano.EVar "f")
               , 1
-              , "2e - e:f")
+              , "2f - e:f")
 
   , fileTest  ( "tests/input/t1.hs"
               , Nano.VInt 45

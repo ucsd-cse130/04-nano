@@ -752,7 +752,7 @@ ELet "z" (EInt 3) (ELet "y" (EInt 2) (ELet "x" (EInt 1) (ELet "z1" (EInt 0) (EBi
 
 ```
 
-### (d) 35 points
+### (e) 35 points
 
 Restructure your parser to give binary operators the
 following precedence and associativity.  This will
@@ -790,7 +790,7 @@ EBin Minus (EBin Minus (EInt 1) (EInt 2)) (EInt 3)
 EBin Or (EBin And (EBin Plus (EInt 1) (EVar "a")) (EVar "b")) (EBin Minus (EBin Minus (EBin Plus (EVar "c") (EBin Mul (EVar "d") (EVar "e"))) (EVar "f")) (EApp (EVar "g") (EVar "x")))
 ```
 
-### (e) 15 points
+### (f) 15 points
 
 Add the following tokens to the lexer and parser.
 
