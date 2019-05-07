@@ -40,8 +40,11 @@ error "TBD: ..."
 
 with suitable Haskell implementations.
 
+---
 **Note:** Start early! Lexing and Parsing are new tools, which may
 take a while to grok.
+
+---
 
 
 ## Assignment Testing and Evaluation
@@ -555,6 +558,15 @@ rules for
 * `NUM` which has a single `Int` argument,
    which holds the value of the numeric literal,
    which corresponds to a sequence of one or more digits.
+---
+**Note**
+Be careful when implementing the regular expressions for in `Lexer.x`,
+as an incorrect expression can cause your program to leak memory
+pretty quickly. You'll want to either watch your memory usage and be
+ready to kill the test, or use a memory limiting tool like this one:
+[timeout](https://github.com/pshved/timeout).
+
+---
 
 Once you have implemented this functionality, you should get the
 following behavior:
@@ -624,6 +636,14 @@ Here `<id>` denotes any identifier from part (a),
 and `<expr>` denotes any expression from part (a),
 or any let / fun / if expression.
 
+---
+**Note**
+
+The order of rules in your lexer definitions matters: earlier patterns
+will match first, then later patters, much like the function cases in
+Haskell.
+
+---
 Once you have implemented this functionality
 you should get the following behavior prompt:
 
