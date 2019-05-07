@@ -51,7 +51,7 @@ unit sc = testGroup "NANO"
               , Nano.EApp (Nano.ELam "x" (Nano.EBin Nano.Mul "x" "x")) (Nano.EInt 5)
               , Nano.VInt 25
               , 2
-              , "1d - (fun x->x*x) 5")
+              , "1d - (\\x -> x*x) 5")
   , scoreTest ( Nano.eval []
               , (Nano.ELet "fac"
                   (Nano.ELam "n"
@@ -63,7 +63,7 @@ unit sc = testGroup "NANO"
                   (Nano.EApp "fac" (Nano.EInt 10)))
               , Nano.VInt 3628800
               , 1
-              , "1e - let fac = (fun n -> if n == 0 then 1 else n * fac (n - 1)) in fac 10")
+              , "1e - let fac = (\\ n -> if n == 0 then 1 else n * fac (n - 1)) in fac 10")
   , scoreTest ( Nano.eval Nano.prelude
               , (Nano.EApp "head" (Nano.EBin Nano.Cons (Nano.EInt 1) Nano.ENil))
               , Nano.VInt 1
@@ -98,7 +98,7 @@ unit sc = testGroup "NANO"
               , "\\x -> 5"
               , Nano.ELam "x" (Nano.EInt 5)
               , 1
-              , "2b - fun x -> 5")
+              , "2b - \\x -> 5")
   , scoreTest ( parse
               , "if a then b else c"
               , Nano.EIf (Nano.EVar "a") (Nano.EVar "b") (Nano.EVar "c")
