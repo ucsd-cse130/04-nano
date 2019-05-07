@@ -800,6 +800,8 @@ In addition, `:` should be right associative.  `"[]"`
 should be parsed as `ENil`, and `:` should be treated
 as any other binary operator.
 
+Also, implement equality for lists in `Eval.hs`.
+
 Once you have implemented this functionality you should get
 the following behavior
 
