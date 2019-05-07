@@ -615,7 +615,6 @@ Add the following tokens to the lexer and parser.
 |:--------|:--------|
 | `let`   | `LET`   |
 | `=`     | `EQB`   |
-| `in`    | `IN`    |
 | `\`     | `LAM`   |
 | `->`    | `ARROW` |
 | `if`    | `IF`    |
@@ -661,7 +660,7 @@ ELet "foo" (ELam "x" (EIf (EVar "y") (EVar "z") (EVar "w"))) (EVar "foo")
 
 >>> parse "let foo x = if y then z else w in foo"
 ELet "foo" (ELam "x" (EIf (EVar "y") (EVar "z") (EVar "w"))) (EVar "foo")
-````
+```
 
 ### (c) 15 points
 
@@ -676,7 +675,6 @@ Add the following tokens to the lexer and parser.
 | `<=`    | `LEQ`   |
 | `==`    | `EQL`   |
 | `/=`    | `NEQ`   |
-| `&&`    | `AND`   |
 | `\|\|`  | `OR`    |
 
 
@@ -712,13 +710,6 @@ ELet "a" (EBin Mul (EInt 6) (EInt 2)) (EBin Ne (EVar "a") (EInt 11))
 ```
 
 ### (d) 10 points
-
-Add the following tokens to the lexer and parser.
-
-|String |  Token    |
-|:------|:----------|
-| `(`   |  `LPAREN` |
-| `)`   |  `RPAREN` |
 
 Add rules to your parser to allow parenthesized expressions.
 In addition, add a rule to your parser for function application.
@@ -792,17 +783,15 @@ EBin Or (EBin And (EBin Plus (EInt 1) (EVar "a")) (EVar "b")) (EBin Minus (EBin 
 
 ### (f) 15 points
 
-Add the following tokens to the lexer and parser.
+Add the following tokens to the lexer
 
 
 | String | Token   |
 |:-------|:--------|
 | `[`    | `LBRAC` |
 | `]`    | `RBRAC` |
-| `,`    | `COMMA` |
-| `:`    | `COLON` |
 
-Add rules to your lexer and parser to support parsing lists.
+Add rules to your parser to support parsing lists.
 `"[a,b,c,d,e,f,g]"` should be parsed as if it were
 `"a:b:c:d:e:f:g:[]"`. The `:` operator should
 have higher priority than the comparison
