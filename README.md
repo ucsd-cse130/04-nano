@@ -158,7 +158,7 @@ the expression inside your interpreter.
 1. Let-bindings
 
 ```haskell
-let x = 3 in x + x		
+let x = 3 in x + x
 ```
 
 is represented by
@@ -183,7 +183,7 @@ ELam "x" (EBin Plus (EVar "x") (EInt 1))
 3. Function applications ("calls")
 
 ```haskell
-f x									
+f x
 ```
 
 is represented by
@@ -196,7 +196,7 @@ EApp (EVar "f") (EVar "x")
 
 ```haskell
 let f = \ x -> f x in
-  f 5	    
+  f 5
 ```
 
 is represented by
@@ -250,7 +250,7 @@ First consider the (restricted subsets of) types described below:
 ```haskell
 data Binop = Plus | Minus | Mul
 
-data Expr  = EInt Int  		
+data Expr  = EInt Int
            | EVar Id
            | EBin Binop Expr Expr
 
@@ -339,7 +339,7 @@ data Value = ...
 ```
 
 * The operators `Eq` and `Ne` should work if both operands
-  are `VInt` values, or if both operands are `VBool` values.  
+  are `VInt` values, or if both operands are `VBool` values.
 
 * The operators `Lt` and `Le` are only defined for `VInt`
   values, and `&&` and `||` are only defined for `VBool`
@@ -369,7 +369,7 @@ Also note that, so long as you error message is appropriate, you will receive
 points. We will not be checking for an exact error message. However,
 it should contain the substring 'type error:'.
 
-Next, implement the evaluation of `EIf p t f` expressions.  
+Next, implement the evaluation of `EIf p t f` expressions.
 
 1. First, evaluate the `p`; if `p` does not evaluate to a
    `VBool` value, then your evaluator should
@@ -455,7 +455,7 @@ the `VClos env x e` where
 * `env` is the environment at the point where
    that function was declared,
 * `x` is the formal parameter, and
-* `e` the body expression of the function.  
+* `e` the body expression of the function.
 
 Extend your implementation of `eval` by adding the
 appropriate cases for the new type constructors.
@@ -660,10 +660,10 @@ Add the following tokens to the lexer and parser.
 | `||`    | `OR`    |
 
 
-Add all of these as binary operators to your parser.  
+Add all of these as binary operators to your parser.
 Each should result in a `EBin` expression with
 the corresponding `binop`.  The arguments to
-these binary operators may be *any* expressions.  
+these binary operators may be *any* expressions.
 (You don't need to worry about types:  `3 + True || 7`
 is allowed as far as the parser is concerned.)
 
@@ -700,8 +700,8 @@ Add the following tokens to the lexer and parser.
 | `(`   |  `LPAREN` |
 | `)`   |  `RPAREN` |
 
-Add rules to your parser to allow parenthesized expressions.  
-In addition, add a rule to your parser for function application.  
+Add rules to your parser to allow parenthesized expressions.
+In addition, add a rule to your parser for function application.
 Recall that function application is simply `"<expr> <expr>"`
 which corresponds to calling the (function corresponding to the)
 left expression with the (argument corresponding to the)
@@ -743,12 +743,12 @@ parser, or see how to
 
 **Operators Precedence Order**
 
-+ (Highest) Fun Application         
-+ `*`                    
-+ `+`, `-`	                     
-+ `==`, `/=`, `<`, `<=`	          
-+ `&&`	                          
-+ (Lowest) `||`	                             
++ (Highest) Fun Application
++ `*`
++ `+`, `-`
++ `==`, `/=`, `<`, `<=`
++ `&&`
++ (Lowest) `||`
 
 **Precedence** Function application having higher precedence than
 multiplications, and multiplication higher than addition
