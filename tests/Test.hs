@@ -36,6 +36,12 @@ unit sc = testGroup "NANO"
               , "type error"
               , 1
               , "1b - bt||c3")
+  , scoreTest ( Nano.eval env2
+              , Nano.EIf (Nano.EBin Nano.Lt (Nano.EInt 3) (Nano.EInt 3))
+                (Nano.EInt 2) (Nano.EInt 4)
+              , Nano.VInt 4
+              , 1
+              , "1b - if (3 < 3) then 2 else 4")
   , scoreTest ( Nano.eval []
               , Nano.ELet "x" (Nano.EInt 4) "x"
               , Nano.VInt 4
