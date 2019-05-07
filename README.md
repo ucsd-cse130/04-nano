@@ -745,10 +745,9 @@ ELet "z" (EInt 3) (ELet "y" (EInt 2) (ELet "x" (EInt 1) (ELet "z1" (EInt 0) (EBi
 
 ### (e) 35 points
 
-Restructure your parser to give binary operators the
-following precedence and associativity.  This will
-likely require that you both add additional rules to your
-parser and use or see how to
+Restructure your parser to give binary operators the following
+precedence and associativity.  This will likely require that you both
+add additional rules to your parser and use
 [Happy's precedence syntax](https://www.haskell.org/happy/doc/html/sec-Precedences.html)
 
 
