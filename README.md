@@ -795,12 +795,12 @@ EBin Or (EBin And (EBin Plus (EInt 1) (EVar "a")) (EVar "b")) (EBin Minus (EBin 
 Add the following tokens to the lexer and parser.
 
 
-String      Token
---------    --------
-`[`         `LBRAC`
-`]`         `RBRAC`
-`,`         `COMMA`
-`:`         `COLON`
+| String | Token   |
+|:-------|:--------|
+| `[`    | `LBRAC` |
+| `]`    | `RBRAC` |
+| `,`    | `COMMA` |
+| `:`    | `COLON` |
 
 Add rules to your lexer and parser to support parsing lists.
 `"[a,b,c,d,e,f,g]"` should be parsed as if it were
