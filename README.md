@@ -540,7 +540,7 @@ We will begin by making our parser recognize some of
 the simplest Nano expressions: constants and variables.
 
 Begin with `Lexer.x` using the given rules for
-keywords `let` as an inspiration, fill in the
+keywords `in` and `&&` as an inspiration, fill in the
 rules for
 
 * `TRUE` and `FALSE` which should correspond to
