@@ -791,8 +791,8 @@ Add the following tokens to the lexer
 | `]`    | `RBRAC` |
 
 Add rules to your parser to support parsing lists.
-`"[a,b,c,d,e,f,g]"` should be parsed as if it were
-`"a:b:c:d:e:f:g:[]"`. The `:` operator should
+`"[a,b,c]"` should be parsed as if it were
+`"((a):(b):(c):[])"`. The `:` operator should
 have higher priority than the comparison
 functions (`==`, `<=` etc.), and lower priority
 than `+` and `-`.
