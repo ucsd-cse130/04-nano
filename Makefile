@@ -1,10 +1,10 @@
 
 #####################################################################################################
-COURSE=cs130sp19
-ASGN=03
-NAME=fold
+COURSE=cs130wi20
+ASGN=04
+NAME=nano
 STACK=stack --allow-different-user
-BUILD_OPTS=--ghc-options -O0 
+BUILD_OPTS=--ghc-options -O0
 #####################################################################################################
 
 test: clean
@@ -13,11 +13,11 @@ test: clean
 bin:
 	$(STACK) build $(BUILD_OPTS)
 
-clean: 
+clean:
 	$(STACK) clean
 
-distclean: clean 
-	rm -rf .stack-work 
+distclean: clean
+	rm -rf .stack-work
 
 tags:
 	hasktags -x -c src/

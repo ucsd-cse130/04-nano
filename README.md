@@ -1,6 +1,6 @@
 # Assignment 4: Nano (270 points)
 
-## Due by 5/29/2019 23:59:59
+## Due by Wednesday 3/4/2020, 23:59:59
 
 
 ## Overview
@@ -235,7 +235,7 @@ type Env = [(Id, Value)]
 Intuitively, the Nano integer value `4` and boolean value
 `True` are represented respectively as `VInt 4` and `VBool True`.
 The more interesting case is for closures that correspond to
-function values (see [lecture notes](https://nadia-polikarpova.github.io/cse130-sp18/lectures/05-closure.html)).
+function values (see [lecture notes](https://ucsd-cse130.github.io/wi20/lectures/05-closure.html)).
 
 - `VClos env "x" e` represents a function with argument `"x"`
    and body-expression `e` that was defined in an environment
