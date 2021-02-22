@@ -1,7 +1,6 @@
 # Assignment 4: Nano (270 points)
 
-## Due by Wednesday 3/4/2020, 23:59:59
-
+## Due by Friday 3/5/2021, 23:59:59
 
 ## Overview
 
@@ -93,12 +92,6 @@ To submit your code, just do:
 ```bash
 $ make turnin
 ```
-
-`turnin` will provide you with a confirmation of the
-submission process; make sure that the size of the file
-indicated by `turnin` matches the size of your file.
-See the ACS Web page on [turnin](http://acs.ucsd.edu/info/turnin.php)
-for more information on the operation of the program.
 
 ## Data Structures and Overview
 
